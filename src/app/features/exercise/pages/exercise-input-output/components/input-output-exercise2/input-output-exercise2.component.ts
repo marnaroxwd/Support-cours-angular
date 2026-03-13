@@ -1,9 +1,11 @@
 import {Component} from "@angular/core";
 import {SpoilComponent} from "@shared/components/spoil/spoil.component";
+import { TodoListFormComponent } from "./components/todo-list-form/todo-list-form.component";
+import { TodoListListingComponent } from "./components/todo-list-listing/todo-list-listing.component";
 
 @Component({
 	selector: "input-output-exercise2",
-	imports: [SpoilComponent],
+	imports: [SpoilComponent, TodoListListingComponent],
 	templateUrl: "./input-output-exercise2.component.html",
 	styleUrl: "./input-output-exercise2.component.scss",
 })

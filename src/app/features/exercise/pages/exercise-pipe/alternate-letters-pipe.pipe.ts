@@ -13,7 +13,13 @@ export class AlternateLettersPipePipe implements PipeTransform {
 				result += value[i];
 			}
 		}
-
 		return result;
+		/*
+		const tmp = value.toLowerCase().split("");
+		for(let i = 0; i< tmp.length; i +=2){
+		tmp[i] = tmp[i].toUpperCase}
+		
+		return tmp.toString*/
+
 	}
 }

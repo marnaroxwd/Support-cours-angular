@@ -28,7 +28,7 @@
 	</div>
 	<div class="card-body">
 		<!--	Place ton color picker ici!	-->
-
+		<color-picker (selectEvent)="changeColorEvent($event)"></color-picker>
 		<p [style.color]="selectedColor">Selected color</p>
 	</div>
 </article>

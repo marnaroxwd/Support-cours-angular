@@ -1,0 +1,9 @@
+<form>
+  <label for="colors">Choisissez une couleur :</label>
+  <select [(ngModel)]="color" (ngModelChange)="selectChangingEvent()" id="colors" name="colors">
+    <option  value="red" selected>Rouge</option>
+    <option value="blue">Bleu</option>
+    <option value="green">Vert</option>
+    <option value="yellow">Jaune</option>
+  </select>
+</form>

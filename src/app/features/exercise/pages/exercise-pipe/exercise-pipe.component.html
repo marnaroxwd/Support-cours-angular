@@ -23,7 +23,7 @@
 
 			<div class="container mt-4">
 				<p class="fs-5">
-					Texte transformer: <strong>{{ text | alternateLettersPipe}}</strong>
+					Texte transformer: <strong>{{ text | alternateLettersPipe }}</strong>
 				</p>
 
 				<form>
@@ -70,9 +70,13 @@
 							<code>a ... b ... c</code>
 						</li>
 						<li>... Bref, l'utilisateur choisit.</li>
+						<li>{{['1','2','3'] | arraySeparator}}</li>
+						<li>{{['1','2','3'] | arraySeparator: "mazeltov "}}</li>
+						<li>{{['1','2','3'] | arraySeparator: " 👈(ﾟヮﾟ👈) (👉ﾟヮﾟ)👉"}}</li>
 					</ul>
 				</li>
 			</ul>
 		</div>
 	</article>
+	
 </section>

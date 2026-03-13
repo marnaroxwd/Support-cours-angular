@@ -6,7 +6,8 @@
 			<br />
 			<code>src/app/features/exercise/pages/exercise-directive/</code>
 			<br />
-			Et afficher le résultat dans la balise <code>div</code> qui contient le commentaire : <code>PLACER VOTRE CODE ICI!</code>
+			Et afficher le résultat dans la balise <code>div</code> qui contient le commentaire :
+			<code>PLACER VOTRE CODE ICI!</code>
 		</p>
 	</div>
 	<article class="card">
@@ -30,7 +31,10 @@
 		<div class="card-body">
 			<p>Créer une liste de produits et l'afficher :</p>
 			<ul>
-				<li>Si un produit est en promo, on affiche son prix normal barré et son prix promo en rouge.</li>
+				<li>
+					Si un produit est en promo, on affiche son prix normal barré et son prix promo
+					en rouge.
+				</li>
 				<li>Si un produit n'est plus disponible (qtt 0), afficher qu'il ne l'est plus.</li>
 			</ul>
 		</div>
@@ -39,8 +43,24 @@
 		<div class="card-header">
 			<h2>Résultat:</h2>
 		</div>
-		<div class="card-body">
-			<!-- PLACER VOTRE CODE ICI!	-->
+		<div class="card-body mb-4">
+			@for (produit of produits; track $index) {
+				<ul class="list-group mb-4">
+					<li class="list-group-item">{{ produit.nom }}</li>
+					<li class="list-group-item"><img [src]="produit.photo" alt="" /></li>
+					<li class="list-group-item" [ngClass]="{'text-decoration-line-through': produit.prixPromo}">
+						{{ produit.prix }}
+					</li>
+					@if (produit.prixPromo) {
+						<li class="list-group-item text-danger">{{ produit.prixPromo }}</li>
+					}
+					@if (produit.qttRestante === 0) {
+						<li class="list-group-item">Il y a plus rien</li>
+					} @else {
+						<li class="list-group-item">{{ produit.qttRestante }}</li>
+					}
+				</ul>
+			}
 		</div>
 	</article>
 </section>
